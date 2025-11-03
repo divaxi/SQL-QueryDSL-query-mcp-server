@@ -27,67 +27,41 @@ import org.springframework.stereotype.Service;
 
 import com.spring.ai.dto.EmployeeFilter;
 import com.spring.ai.dto.EmployeePageRes;
+import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.model.Employee;
-import com.spring.ai.model.EmployeeSpecification;
 import com.spring.ai.repository.EmployeeRepository;
+import com.spring.ai.utils.QuerySpecificationBuilder;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
+@RequiredArgsConstructor
 public class EmployeeService {
 
-private final EmployeeRepository employeeRepository;
+    private final QuerySpecificationBuilder<Employee> builder;
+
+
+    private final EmployeeRepository employeeRepository;
 
     @Tool(description = "Find Page of employees with filtering options")
-    public EmployeePageRes findAllFilteredEmployees(@ToolParam(description = "Filtering options for employee search") EmployeeFilter option) {
+    public EmployeePageRes findAllFilteredEmployees(@ToolParam(description = "Filtering options for employee search") QueryRequest<Employee> option) {
 
     Pageable pageable = PageRequest.of(option.getPage(), option.getLimit());
 
     log.info("Finding all filtered employees with options: {}", option);
-    
-    Specification<Employee> spec = Specification.where(null);
 
+    Specification<Employee> spec = builder.build(option.getWhere());
 
-    if (option.getEmployeeId() != null) {
-        spec = spec.and(EmployeeSpecification.hasEmployeeId(option.getEmployeeId()));
-    }
-
-    if (option.getFirstName() != null) {
-        spec = spec.and(EmployeeSpecification.hasFirstName(option.getFirstName()));
-    }
-
-    if (option.getLastName() != null) {
-        spec = spec.and(EmployeeSpecification.hasLastName(option.getLastName())); 
-    }
-    if (option.getEmail() != null) {
-        spec = spec.and(EmployeeSpecification.hasEmail(option.getEmail()));
-    }
-    if (option.getPhone() != null) {
-        spec = spec.and(EmployeeSpecification.hasPhone(option.getPhone()));
-    }
-    if (option.getHireDateFrom() != null || option.getHireDateTo() != null) {
-        spec = spec.and(EmployeeSpecification.hireDateBetween(option.getHireDateFrom(), option.getHireDateTo()));
-    }   
-    if (option.getManagerId() != null) {
-        spec = spec.and(EmployeeSpecification.hasManagerId(option.getManagerId()));
-    }   
-    if (option.getJobTitle() != null) { 
-        spec = spec.and(EmployeeSpecification.hasJobTitle(option.getJobTitle()));
-    }   
-    if (option.getMinSalary() != null || option.getMaxSalary() != null) {
-        spec = spec.and(EmployeeSpecification.salaryBetween(option.getMinSalary(), option.getMaxSalary()));
-    } 
     Page<Employee> employeePage = employeeRepository.findAll(spec, pageable);
 
     return EmployeePageRes.builder()
             .employees(employeePage.getContent())
             .totalPages(employeePage.getTotalPages())
             .totalElements(employeePage.getTotalElements())
-            .page(employeePage.getNumber())
-            .limit(employeePage.getSize())
+            .page(option.getPage())
+            .limit(option.getLimit())
             .build();
 }
 
