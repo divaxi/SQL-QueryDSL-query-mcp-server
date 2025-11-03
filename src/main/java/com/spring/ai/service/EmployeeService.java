@@ -16,6 +16,7 @@
 package com.spring.ai.service;
 
 
+
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.data.domain.Page;
@@ -25,24 +26,30 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.spring.ai.dto.EmployeeFilter;
+import com.spring.ai.dto.EmployeePageRes;
 import com.spring.ai.model.Employee;
 import com.spring.ai.model.EmployeeSpecification;
 import com.spring.ai.repository.EmployeeRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class EmployeeService {
 
-  private final EmployeeRepository employeeRepository;
+private final EmployeeRepository employeeRepository;
 
-  @Tool(description = "Find Page of employees with filtering options")
-    public Page<Employee> findAllFilteredEmployees(@ToolParam(description = "Filtering options for employee search") EmployeeFilter option) {
+    @Tool(description = "Find Page of employees with filtering options")
+    public EmployeePageRes findAllFilteredEmployees(@ToolParam(description = "Filtering options for employee search") EmployeeFilter option) {
 
     Pageable pageable = PageRequest.of(option.getPage(), option.getLimit());
 
+    log.info("Finding all filtered employees with options: {}", option);
+    
     Specification<Employee> spec = Specification.where(null);
+
 
     if (option.getEmployeeId() != null) {
         spec = spec.and(EmployeeSpecification.hasEmployeeId(option.getEmployeeId()));
@@ -58,7 +65,6 @@ public class EmployeeService {
     if (option.getEmail() != null) {
         spec = spec.and(EmployeeSpecification.hasEmail(option.getEmail()));
     }
-
     if (option.getPhone() != null) {
         spec = spec.and(EmployeeSpecification.hasPhone(option.getPhone()));
     }
@@ -74,7 +80,15 @@ public class EmployeeService {
     if (option.getMinSalary() != null || option.getMaxSalary() != null) {
         spec = spec.and(EmployeeSpecification.salaryBetween(option.getMinSalary(), option.getMaxSalary()));
     } 
-     return employeeRepository.findAll(spec, pageable);
+    Page<Employee> employeePage = employeeRepository.findAll(spec, pageable);
+
+    return EmployeePageRes.builder()
+            .employees(employeePage.getContent())
+            .totalPages(employeePage.getTotalPages())
+            .totalElements(employeePage.getTotalElements())
+            .page(employeePage.getNumber())
+            .limit(employeePage.getSize())
+            .build();
 }
 
 @Tool(description ="Find Employee by ID")

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeFilter{
+public class EmployeeFilter {
 
     // ====== Bộ lọc (Filters) ======
     private Long employeeId;
@@ -25,13 +25,11 @@ public class EmployeeFilter{
     private LocalDate hireDateTo;
     private Long managerId;
 
-    @ToolParam(
-        description = "Job title of the employee. Must be one of: " +
-                      "'Human Resources Representative', 'Purchasing Manager', 'Accounting Manager', " +
-                      "'Stock Clerk', 'Accountant', 'Stock Manager', 'Sales Manager', 'Sales Representative', " +
-                      "'Administration Vice President', 'Shipping Clerk', 'Programmer', 'Finance Manager', " +
-                      "'Marketing Manager', 'Purchasing Clerk', 'Marketing Representative', 'Away'."
-    )
+    @ToolParam(description = "Job title of the employee. Must be one of: " +
+            "'Human Resources Representative', 'Purchasing Manager', 'Accounting Manager', " +
+            "'Stock Clerk', 'Accountant', 'Stock Manager', 'Sales Manager', 'Sales Representative', " +
+            "'Administration Vice President', 'Shipping Clerk', 'Programmer', 'Finance Manager', " +
+            "'Marketing Manager', 'Purchasing Clerk', 'Marketing Representative', 'Away'.")
     private JobTitle jobTitle;
     private Double minSalary;
     private Double maxSalary;

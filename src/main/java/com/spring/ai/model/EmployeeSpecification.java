@@ -20,6 +20,7 @@ public class EmployeeSpecification {
         };
     }
     public static Specification<Employee> hireDateBetween(java.time.LocalDate from, java.time.LocalDate to) {
+
         return (root, query, cb) -> {
             if (from == null && to == null) {
                 return null;
@@ -40,9 +41,8 @@ public class EmployeeSpecification {
     }   
     public static Specification<Employee> hasJobTitle(JobTitle jobTitle) {
         return (root, query, criteriaBuilder) ->
-                criteriaBuilder.like(root
-                        .get(Employee_.jobTitle)
-                         ,"%" + jobTitle.name() + "%");
+                criteriaBuilder.like(criteriaBuilder.lower(root.get(Employee_.jobTitle))
+                ,"%" + jobTitle.name().toLowerCase() + "%");
     }   
     public static Specification<Employee> hasEmail(String email) {
         return (root, query, criteriaBuilder) ->
