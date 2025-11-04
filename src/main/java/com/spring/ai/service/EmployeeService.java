@@ -25,7 +25,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.spring.ai.dto.EmployeeFilter;
 import com.spring.ai.dto.EmployeePageRes;
 import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.model.Employee;
@@ -34,6 +33,7 @@ import com.spring.ai.utils.QuerySpecificationBuilder;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 
 @Service
 @Slf4j
@@ -68,11 +68,6 @@ public class EmployeeService {
 @Tool(description ="Find Employee by ID")
 public Employee findEmployeeById( @ToolParam(description="Employee ID") Long id) {     
     return employeeRepository.findById(id).orElse(null);
-}
-
-@Tool(description ="Test tool method")
-public String testToolMethod( @ToolParam(description="A test parameter") EmployeeFilter option) {
-    return "Test tool method executed successfully with parameter: " + option;
 }
 
 }

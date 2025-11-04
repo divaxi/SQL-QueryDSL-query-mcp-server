@@ -4976,3 +4976,50 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" bec
 2025-11-04 01:32:04.281 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-04 01:32:04.284 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-11-04 01:32:04.376 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-04 19:08:39.563 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-04 19:08:39.640 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46657 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-04 19:08:39.645 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-04 19:08:39.714 INFO  [restartedMain] ChangeableUrls - The Class-Path manifest attribute in /home/dryleaf/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.4.0.24.05/ojdbc11-23.4.0.24.05.jar referenced one or more files that do not exist: file:/home/dryleaf/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.4.0.24.05/oraclepki.jar
+2025-11-04 19:08:39.714 INFO  [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-04 19:08:39.715 INFO  [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-04 19:08:40.533 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-04 19:08:40.688 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interface.
+2025-11-04 19:08:41.191 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-04 19:08:41.204 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-04 19:08:41.206 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-04 19:08:41.207 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-04 19:08:41.248 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-04 19:08:41.250 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1533 ms
+2025-11-04 19:08:41.557 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-04 19:08:41.626 INFO  [restartedMain] Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-04 19:08:41.672 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-04 19:08:42.013 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-04 19:08:42.051 INFO  [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 19:08:42.600 INFO  [restartedMain] HikariPool - HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@128f8782
+2025-11-04 19:08:42.602 INFO  [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 19:08:42.894 WARN  [restartedMain] deprecation - HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-04 19:08:43.016 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-04 19:08:43.994 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-04 19:08:53.626 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-04 19:08:54.049 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-04 19:08:54.323 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-04 19:08:54.368 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 2
+2025-11-04 19:08:54.369 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-04 19:08:54.369 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-04 19:08:54.369 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-04 19:08:54.487 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-04 19:08:54.501 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-04 19:08:54.512 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-04 19:08:54.520 INFO  [restartedMain] McpApplication - Started McpApplication in 15.306 seconds (process running for 16.09)
+2025-11-04 19:10:08.579 INFO  [SpringApplicationShutdownHook] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-04 19:10:08.586 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-04 19:10:08.601 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-04 19:10:08.605 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-04 19:10:08.717 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
