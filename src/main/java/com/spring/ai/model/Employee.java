@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -51,6 +52,7 @@ public class Employee {
 
     // ✅ Quan hệ ngược tới bảng EmployeeProject
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<EmployeeProject> employeeProjects = new ArrayList<>();
 }
 

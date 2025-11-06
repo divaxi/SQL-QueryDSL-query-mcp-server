@@ -6,6 +6,9 @@ import java.sql.Date;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
@@ -58,6 +61,7 @@ public class EmployeeProject {
      foreignKey = @ForeignKey(name = "FK_EP_EMPLOYEE")
      )
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonBackReference
     private Employee employee;
 
     @ManyToOne
@@ -65,6 +69,7 @@ public class EmployeeProject {
     @JoinColumn(name = "PROJECT_ID", referencedColumnName = "PROJECT_ID",
      foreignKey = @ForeignKey(name = "FK_EP_PROJECT")
      )
+    @JsonBackReference
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Project project;
 

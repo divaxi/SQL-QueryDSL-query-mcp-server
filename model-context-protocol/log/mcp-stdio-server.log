@@ -11998,3 +11998,407 @@ java.lang.NullPointerException: Cannot invoke "com.spring.ai.dto.EmployeeFilter.
 2025-11-06 18:19:08.434 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-06 18:19:08.436 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-8 - Shutdown initiated...
 2025-11-06 18:19:08.438 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-8 - Shutdown completed.
+2025-11-06 18:23:11.881 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-06 18:23:11.938 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:23:11.943 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:23:11.999 INFO  [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-06 18:23:12.000 INFO  [restartedMain] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-06 18:23:12.708 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:23:12.825 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+2025-11-06 18:23:13.310 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:23:13.321 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:13.324 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:23:13.324 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:23:13.355 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:23:13.356 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1355 ms
+2025-11-06 18:23:13.495 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:23:13.536 INFO  [restartedMain] Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-06 18:23:13.561 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:23:13.767 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:23:13.790 INFO  [restartedMain] HikariDataSource - HikariPool-1 - Starting...
+2025-11-06 18:23:13.895 INFO  [restartedMain] HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54355d94
+2025-11-06 18:23:13.896 INFO  [restartedMain] HikariDataSource - HikariPool-1 - Start completed.
+2025-11-06 18:23:13.919 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:23:13.934 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:23:14.315 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:14.315 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:14.914 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:23:15.001 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:15.525 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:23:15.837 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:23:15.897 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:23:15.897 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:23:15.898 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:23:15.898 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:23:16.011 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:23:16.025 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:16.036 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:23:16.045 INFO  [restartedMain] McpApplication - Started McpApplication in 4.47 seconds (process running for 5.175)
+2025-11-06 18:23:26.430 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 15 class path changes (0 additions, 0 deletions, 15 modifications)
+2025-11-06 18:23:26.435 INFO  [Thread-5] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:23:26.437 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:26.440 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:23:26.443 INFO  [Thread-5] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:26.464 INFO  [Thread-5] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:26.467 INFO  [Thread-5] HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-06 18:23:26.472 INFO  [Thread-5] HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-06 18:23:26.672 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:23:26.672 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:23:27.032 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:23:27.049 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2025-11-06 18:23:27.168 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:23:27.169 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:27.170 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:23:27.170 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:23:27.179 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:23:27.179 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 501 ms
+2025-11-06 18:23:27.212 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:23:27.214 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:23:27.220 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:23:27.220 INFO  [restartedMain] HikariDataSource - HikariPool-2 - Starting...
+2025-11-06 18:23:27.242 INFO  [restartedMain] HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@bc18368
+2025-11-06 18:23:27.242 INFO  [restartedMain] HikariDataSource - HikariPool-2 - Start completed.
+2025-11-06 18:23:27.245 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:23:27.246 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:23:27.286 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:27.286 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:27.354 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:23:27.399 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:27.491 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:23:27.584 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:23:27.601 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:23:27.602 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:23:27.602 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:23:27.602 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:23:27.632 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:23:27.641 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:27.642 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:23:27.646 INFO  [restartedMain] McpApplication - Started McpApplication in 1.038 seconds (process running for 16.776)
+2025-11-06 18:23:27.648 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:23:40.052 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-06 18:23:40.053 INFO  [Thread-7] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:23:40.054 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:40.055 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:23:40.055 INFO  [Thread-7] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:40.057 INFO  [Thread-7] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:40.058 INFO  [Thread-7] HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-06 18:23:40.061 INFO  [Thread-7] HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-06 18:23:40.154 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:23:40.155 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:23:40.324 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:23:40.333 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-11-06 18:23:40.427 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:23:40.428 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:40.428 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:23:40.428 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:23:40.436 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:23:40.436 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 279 ms
+2025-11-06 18:23:40.465 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:23:40.467 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:23:40.478 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:23:40.479 INFO  [restartedMain] HikariDataSource - HikariPool-3 - Starting...
+2025-11-06 18:23:40.514 INFO  [restartedMain] HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@25f33aa9
+2025-11-06 18:23:40.517 INFO  [restartedMain] HikariDataSource - HikariPool-3 - Start completed.
+2025-11-06 18:23:40.523 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:23:40.524 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:23:40.554 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:40.555 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:40.602 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:23:40.642 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:40.721 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:23:40.794 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:23:40.807 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:23:40.808 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:23:40.808 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:23:40.808 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:23:40.830 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:23:40.842 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:40.844 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:23:40.847 INFO  [restartedMain] McpApplication - Started McpApplication in 0.724 seconds (process running for 29.977)
+2025-11-06 18:23:40.848 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:23:47.245 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-06 18:23:47.246 INFO  [Thread-11] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:23:47.247 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:47.247 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:23:47.248 INFO  [Thread-11] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:47.249 INFO  [Thread-11] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:47.249 INFO  [Thread-11] HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-06 18:23:47.253 INFO  [Thread-11] HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-06 18:23:47.325 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:23:47.326 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:23:47.460 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:23:47.466 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interface.
+2025-11-06 18:23:47.546 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:23:47.547 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:47.547 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:23:47.548 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:23:47.555 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:23:47.555 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 228 ms
+2025-11-06 18:23:47.600 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:23:47.602 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:23:47.609 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:23:47.609 INFO  [restartedMain] HikariDataSource - HikariPool-4 - Starting...
+2025-11-06 18:23:47.634 INFO  [restartedMain] HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@44e7433f
+2025-11-06 18:23:47.635 INFO  [restartedMain] HikariDataSource - HikariPool-4 - Start completed.
+2025-11-06 18:23:47.638 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:23:47.639 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:23:47.682 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:47.683 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:23:47.743 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:23:47.804 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:23:47.946 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:23:48.078 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:23:48.105 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:23:48.105 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:23:48.106 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:23:48.106 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:23:48.137 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:23:48.153 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:23:48.155 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:23:48.161 INFO  [restartedMain] McpApplication - Started McpApplication in 0.86 seconds (process running for 37.291)
+2025-11-06 18:23:48.163 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:23:53.442 INFO  [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-06 18:23:53.442 INFO  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-06 18:23:53.443 INFO  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 1 ms
+2025-11-06 18:23:53.518 INFO  [http-nio-8080-exec-1] EmployeeService - Finding all filtered employees with options: null
+2025-11-06 18:23:53.852 WARN  [http-nio-8080-exec-1] DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-06 18:23:53.854 WARN  [http-nio-8080-exec-1] DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-06 18:24:05.699 INFO  [http-nio-8080-exec-7] AbstractOpenApiResource - Init duration for springdoc-openapi is: 198 ms
+2025-11-06 18:24:09.025 INFO  [http-nio-8080-exec-8] EmployeeService - Finding all filtered employees with options: null
+2025-11-06 18:24:09.055 WARN  [http-nio-8080-exec-8] DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-06 18:24:09.056 WARN  [http-nio-8080-exec-8] DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-06 18:24:46.605 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-06 18:24:46.606 INFO  [Thread-15] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:24:46.607 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:24:46.607 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:24:46.608 INFO  [Thread-15] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:24:46.609 INFO  [Thread-15] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:24:46.610 INFO  [Thread-15] HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-06 18:24:46.613 INFO  [Thread-15] HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-06 18:24:46.699 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:24:46.700 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:24:46.882 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:24:46.889 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2025-11-06 18:24:46.988 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:24:46.989 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:24:46.990 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:24:46.990 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:24:47.002 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:24:47.002 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 301 ms
+2025-11-06 18:24:47.051 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:24:47.053 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:24:47.060 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:24:47.061 INFO  [restartedMain] HikariDataSource - HikariPool-5 - Starting...
+2025-11-06 18:24:47.090 INFO  [restartedMain] HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@694bd20
+2025-11-06 18:24:47.090 INFO  [restartedMain] HikariDataSource - HikariPool-5 - Start completed.
+2025-11-06 18:24:47.092 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:24:47.093 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:24:47.124 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:24:47.124 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:24:47.161 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:24:47.200 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:24:47.302 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:24:47.458 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:24:47.480 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:24:47.480 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:24:47.480 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:24:47.481 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:24:47.536 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:24:47.547 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:24:47.551 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:24:47.560 INFO  [restartedMain] McpApplication - Started McpApplication in 0.884 seconds (process running for 96.69)
+2025-11-06 18:24:47.562 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:24:48.420 INFO  [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-06 18:24:48.420 INFO  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-06 18:24:48.422 INFO  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 2 ms
+2025-11-06 18:24:48.424 INFO  [http-nio-8080-exec-1] EmployeeService - Finding all filtered employees with options: null
+2025-11-06 18:27:27.111 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-06 18:27:27.112 INFO  [Thread-19] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:27:27.113 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:27:27.114 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:27:27.115 INFO  [Thread-19] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:27:27.117 INFO  [Thread-19] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:27:27.118 INFO  [Thread-19] HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-06 18:27:27.121 INFO  [Thread-19] HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-11-06 18:27:27.248 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:27:27.249 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:27:27.411 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:27:27.418 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2025-11-06 18:27:27.556 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:27:27.557 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:27:27.558 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:27:27.558 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:27:27.569 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:27:27.570 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 320 ms
+2025-11-06 18:27:27.632 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:27:27.636 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:27:27.642 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:27:27.645 INFO  [restartedMain] HikariDataSource - HikariPool-6 - Starting...
+2025-11-06 18:27:27.669 INFO  [restartedMain] HikariPool - HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@70d9e1c
+2025-11-06 18:27:27.669 INFO  [restartedMain] HikariDataSource - HikariPool-6 - Start completed.
+2025-11-06 18:27:27.672 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:27:27.673 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:27:27.721 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:27:27.722 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:27:27.774 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:27:27.821 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:27:27.936 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:27:28.067 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:27:28.082 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:27:28.082 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:27:28.083 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:27:28.083 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:27:28.114 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:27:28.123 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:27:28.125 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:27:28.131 INFO  [restartedMain] McpApplication - Started McpApplication in 0.91 seconds (process running for 257.26)
+2025-11-06 18:27:28.132 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:29:54.664 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-06 18:29:54.666 INFO  [Thread-23] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:29:54.666 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:29:54.668 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:29:54.669 INFO  [Thread-23] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:29:54.672 INFO  [Thread-23] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:29:54.673 INFO  [Thread-23] HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-11-06 18:29:54.675 INFO  [Thread-23] HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-11-06 18:29:54.811 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:29:54.812 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:29:55.031 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:29:55.042 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-11-06 18:29:55.176 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:29:55.179 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:29:55.180 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:29:55.180 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:29:55.193 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:29:55.193 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 378 ms
+2025-11-06 18:29:55.230 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:29:55.231 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:29:55.241 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:29:55.243 INFO  [restartedMain] HikariDataSource - HikariPool-7 - Starting...
+2025-11-06 18:29:55.271 INFO  [restartedMain] HikariPool - HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@24f94413
+2025-11-06 18:29:55.272 INFO  [restartedMain] HikariDataSource - HikariPool-7 - Start completed.
+2025-11-06 18:29:55.275 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:29:55.276 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:29:55.311 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:29:55.311 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:29:55.358 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:29:55.410 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:29:55.549 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:29:55.664 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:29:55.680 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:29:55.680 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:29:55.681 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:29:55.681 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:29:55.705 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:29:55.720 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:29:55.722 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:29:55.726 INFO  [restartedMain] McpApplication - Started McpApplication in 0.955 seconds (process running for 404.855)
+2025-11-06 18:29:55.726 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:30:13.121 INFO  [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-06 18:30:13.123 INFO  [Thread-27] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:30:13.124 INFO  [tomcat-shutdown] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:30:13.125 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:30:13.126 INFO  [Thread-27] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:30:13.128 INFO  [Thread-27] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:30:13.129 INFO  [Thread-27] HikariDataSource - HikariPool-7 - Shutdown initiated...
+2025-11-06 18:30:13.132 INFO  [Thread-27] HikariDataSource - HikariPool-7 - Shutdown completed.
+2025-11-06 18:30:13.234 INFO  [restartedMain] McpApplication - Starting McpApplication using Java 21.0.8 with PID 46900 (/home/dryleaf/mcp-server/target/classes started by dryleaf in /home/dryleaf/mcp-server)
+2025-11-06 18:30:13.234 INFO  [restartedMain] McpApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-06 18:30:13.374 INFO  [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06 18:30:13.379 INFO  [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interface.
+2025-11-06 18:30:13.473 INFO  [restartedMain] TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-06 18:30:13.473 INFO  [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:30:13.474 INFO  [restartedMain] StandardService - Starting service [Tomcat]
+2025-11-06 18:30:13.474 INFO  [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-06 18:30:13.482 INFO  [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+2025-11-06 18:30:13.482 INFO  [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 247 ms
+2025-11-06 18:30:13.513 INFO  [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06 18:30:13.515 INFO  [restartedMain] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-06 18:30:13.520 INFO  [restartedMain] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06 18:30:13.520 INFO  [restartedMain] HikariDataSource - HikariPool-8 - Starting...
+2025-11-06 18:30:13.542 INFO  [restartedMain] HikariPool - HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@615fe0e2
+2025-11-06 18:30:13.542 INFO  [restartedMain] HikariDataSource - HikariPool-8 - Start completed.
+2025-11-06 18:30:13.544 WARN  [restartedMain] deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06 18:30:13.545 INFO  [restartedMain] pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06 18:30:13.568 WARN  [restartedMain] RootClass - HHH000038: Composite-id class does not override equals(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:30:13.568 WARN  [restartedMain] RootClass - HHH000039: Composite-id class does not override hashCode(): com.spring.ai.model.EmployeeProjectId
+2025-11-06 18:30:13.597 INFO  [restartedMain] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-06 18:30:13.635 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:30:13.716 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06 18:30:13.794 INFO  [restartedMain] McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2025-11-06 18:30:13.805 INFO  [restartedMain] McpServerAutoConfiguration - Registered tools: 3
+2025-11-06 18:30:13.805 INFO  [restartedMain] McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2025-11-06 18:30:13.805 INFO  [restartedMain] McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2025-11-06 18:30:13.805 INFO  [restartedMain] McpServerAutoConfiguration - Enable completions capabilities
+2025-11-06 18:30:13.829 INFO  [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-06 18:30:13.836 INFO  [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-06 18:30:13.837 INFO  [restartedMain] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-06 18:30:13.841 INFO  [restartedMain] McpApplication - Started McpApplication in 0.635 seconds (process running for 422.97)
+2025-11-06 18:30:13.842 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-06 18:30:19.263 INFO  [http-nio-8080-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-06 18:30:19.263 INFO  [http-nio-8080-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-06 18:30:19.265 INFO  [http-nio-8080-exec-1] DispatcherServlet - Completed initialization in 2 ms
+2025-11-06 18:30:19.660 INFO  [http-nio-8080-exec-4] AbstractOpenApiResource - Init duration for springdoc-openapi is: 74 ms
+2025-11-06 18:30:36.540 INFO  [http-nio-8080-exec-5] EmployeeService - Finding all filtered employees with options: null
+2025-11-06 18:30:38.205 INFO  [http-nio-8080-exec-6] EmployeeService - Finding all filtered employees with options: null
+2025-11-06 18:31:53.927 INFO  [SpringApplicationShutdownHook] GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-06 18:31:53.928 INFO  [tomcat-shutdown] GracefulShutdown - Graceful shutdown complete
+2025-11-06 18:31:53.930 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06 18:31:53.930 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-8 - Shutdown initiated...
+2025-11-06 18:31:53.931 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-8 - Shutdown completed.
