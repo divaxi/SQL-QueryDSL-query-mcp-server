@@ -1,5 +1,7 @@
 package com.spring.ai.controller;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.ai.dto.EmployeePageRes;
 import com.spring.ai.dto.QueryRequest;
+import com.spring.ai.model.EmployeeResponse;
 import com.spring.ai.service.EmployeeService;
 
 import jakarta.validation.Valid;
@@ -29,6 +32,11 @@ public class EmployeeController {
     @PostMapping("/test")
     public ResponseEntity<QueryRequest> testEndpoint(@Valid @RequestBody QueryRequest queryRequest){
         return ResponseEntity.ok(queryRequest);
+    }
+
+    @PostMapping("/querydsl")
+    public ResponseEntity<List<EmployeeResponse>> queryDSLFilter(@Valid @RequestBody QueryRequest queryRequest){
+        return ResponseEntity.ok(employeeService.filterEmployeeQueryDSL(queryRequest));
     }
     
 }

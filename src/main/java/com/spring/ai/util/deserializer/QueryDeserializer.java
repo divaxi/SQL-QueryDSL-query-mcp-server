@@ -6,6 +6,7 @@ import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -44,7 +45,7 @@ public class QueryDeserializer extends JsonDeserializer<QueryClause> {
                 return termQuery;
             case "range":
                 RangeQuery rangeQuery = new RangeQuery();
-                rangeQuery.setRange(mapper.convertValue(content, Map.class));
+                rangeQuery.setRange(mapper.convertValue(content, new TypeReference<Map<String,RangeQuery.RangeCondition>>() {}));
                 return rangeQuery;
             case "bool":
                 BoolQuery boolQuery = new BoolQuery();

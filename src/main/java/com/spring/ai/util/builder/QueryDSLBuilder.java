@@ -29,13 +29,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 @SuppressWarnings({"unchecked","rawtypes"})
-@Component
 public class QueryDSLBuilder<T> {
 
     private final AbstractFieldMap fieldMap;
 
     public <T> Predicate create(QueryRequest queryDslObj, EntityPathBase<T> table) {
-        // return queryFactory.select("*").from(type);
         BoolQuery queryJson = queryDslObj.getQuery();
         return buildPredicate(queryJson, table);
     }
@@ -169,10 +167,11 @@ public class QueryDSLBuilder<T> {
             throw new IllegalArgumentException("RangeQuery cannot be empty");
         }
 
-        // Range luôn apply trên 1 field
         Map.Entry<String, RangeQuery.RangeCondition> entry = rangeQuery.getRange().entrySet().iterator().next();
 
+
         String field = entry.getKey();
+
         RangeQuery.RangeCondition condition = entry.getValue();
 
         Path<?> path = fieldMap.get(field);
@@ -188,6 +187,7 @@ public class QueryDSLBuilder<T> {
         // ===============================
         // NUMBER RANGE
         // ===============================
+
         if (path instanceof NumberPath<?> nP) {
 
             NumberPath numberPath = ((NumberPath)nP);

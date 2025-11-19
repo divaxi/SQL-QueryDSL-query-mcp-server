@@ -17,6 +17,8 @@ package com.spring.ai.service;
 
 
 
+import java.util.List;
+
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.data.domain.Page;
@@ -26,8 +28,11 @@ import org.springframework.stereotype.Service;
 
 import com.spring.ai.dto.EmployeeFilter;
 import com.spring.ai.dto.EmployeePageRes;
+import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.model.Employee;
+import com.spring.ai.model.EmployeeResponse;
 import com.spring.ai.repository.EmployeeRepository;
+import com.spring.ai.repository.EmployeeRepositoryQueryDsl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -38,6 +43,8 @@ import lombok.extern.slf4j.Slf4j;
 public class EmployeeService {
 
 private final EmployeeRepository employeeRepository;
+
+private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
 
     @Tool(description = "Find Page of employees with filtering options")
     public EmployeePageRes findAllFilteredEmployees(@ToolParam(description = "Filtering options for employee search") EmployeeFilter option) {
@@ -55,6 +62,11 @@ private final EmployeeRepository employeeRepository;
             .page(employeePage.getNumber())
             .limit(employeePage.getSize())
             .build();
+}
+
+@Tool(description ="QueryDSL for filtering Employee")
+public List<EmployeeResponse> filterEmployeeQueryDSL( QueryRequest queryRequest) {     
+    return employeeRepositoryQueryDsl.filterEmployeeQueryDsl(queryRequest);
 }
 
 @Tool(description ="Find Employee by ID")
