@@ -8,6 +8,7 @@ public class QueryRequest {
     private BoolQuery query;
 
     private int limit = 5;
+
     private int page = 0;
 
 }

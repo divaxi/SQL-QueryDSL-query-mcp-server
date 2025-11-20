@@ -29,16 +29,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 @SuppressWarnings({"unchecked","rawtypes"})
-public class QueryDSLBuilder<T> {
+public class QueryDSLBuilder {
 
     private final AbstractFieldMap fieldMap;
 
-    public <T> Predicate create(QueryRequest queryDslObj, EntityPathBase<T> table) {
+    public  Predicate create(QueryRequest queryDslObj, EntityPathBase table) {
         BoolQuery queryJson = queryDslObj.getQuery();
         return buildPredicate(queryJson, table);
     }
 
-    public <T> Predicate buildPredicate(BoolQuery queryJson, EntityPathBase<T> table)
+    public  Predicate buildPredicate(BoolQuery queryJson, EntityPathBase table)
             throws IllegalArgumentException {
         BooleanBuilder builder = new BooleanBuilder();
         BoolQuery.Clause clauses = queryJson.getBool();
@@ -74,7 +74,7 @@ public class QueryDSLBuilder<T> {
         return builder;
     }
 
-    private <T> Predicate parseClause(QueryClause clause, EntityPathBase<T> table) {
+    private Predicate parseClause(QueryClause clause, EntityPathBase table) {
         if (clause == null)
             return null;
 
@@ -92,7 +92,7 @@ public class QueryDSLBuilder<T> {
 
     }
 
-    private <T> Predicate parseMatch(MatchQuery match, EntityPathBase<T> table) {
+    private  Predicate parseMatch(MatchQuery match, EntityPathBase table) {
         BooleanBuilder builder = new BooleanBuilder();
 
         // Lấy field và value từ map
@@ -126,7 +126,7 @@ public class QueryDSLBuilder<T> {
         return builder;
     }
 
-    private <T> Predicate parseTerm(TermQuery termQuery, EntityPathBase<T> table) {
+    private Predicate parseTerm(TermQuery termQuery, EntityPathBase table) {
         BooleanBuilder builder = new BooleanBuilder();
 
         // Validate
@@ -160,7 +160,7 @@ public class QueryDSLBuilder<T> {
         return builder;
     }
 
-    private <T> Predicate parseRange(RangeQuery rangeQuery, EntityPathBase<T> table) {
+    private  Predicate parseRange(RangeQuery rangeQuery, EntityPathBase table) {
         BooleanBuilder builder = new BooleanBuilder();
 
         if (rangeQuery.getRange() == null || rangeQuery.getRange().isEmpty()) {

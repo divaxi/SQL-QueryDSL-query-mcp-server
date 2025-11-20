@@ -28,6 +28,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.ai.dto.EmployeeFilter;
 import com.spring.ai.dto.EmployeePageRes;
+import com.spring.ai.dto.PagingList;
 import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.model.Employee;
 import com.spring.ai.model.EmployeeResponse;
@@ -51,8 +52,6 @@ private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
 
     Pageable pageable = PageRequest.of(0, 2);
 
-    log.info("Finding all filtered employees with options: {}", option);
-
     Page<Employee> employeePage = employeeRepository.findAll( pageable);
 
     return EmployeePageRes.builder()
@@ -65,7 +64,7 @@ private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
 }
 
 @Tool(description ="QueryDSL for filtering Employee")
-public List<EmployeeResponse> filterEmployeeQueryDSL( QueryRequest queryRequest) {     
+public PagingList<EmployeeResponse> filterEmployeeQueryDSL( QueryRequest queryRequest) {     
     return employeeRepositoryQueryDsl.filterEmployeeQueryDsl(queryRequest);
 }
 

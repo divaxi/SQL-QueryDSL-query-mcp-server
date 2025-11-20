@@ -58,7 +58,6 @@ public class Employee {
     private Double salary;
 
     @OneToMany(mappedBy = "employee", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
-    @JsonManagedReference
     private List<EmployeeProject> projects;
 }
 

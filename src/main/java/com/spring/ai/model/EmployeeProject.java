@@ -43,7 +43,6 @@ public class EmployeeProject {
      foreignKey = @ForeignKey(name = "FK_EP_EMPLOYEE")
      )
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonBackReference
     private Employee employee;
 
     @ManyToOne
@@ -52,7 +51,6 @@ public class EmployeeProject {
      foreignKey = @ForeignKey(name = "FK_EP_PROJECT")
      )
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonBackReference
     private Project project;
 
 }

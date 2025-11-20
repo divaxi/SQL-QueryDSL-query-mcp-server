@@ -1,0 +1,35 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "range": {
+                        "salary": {
+                            "gte": 1500,
+                            "lte": 2000
+                        }
+                    }
+                },
+                {
+                    "bool": {
+                        "must": null,
+                        "should": [
+                            {
+                                "match": {
+                                    "deparment_name": "Engineering"
+                                }
+                            }
+                        ],
+                        "mustNot": null,
+                        "filter": null
+                    }
+                }
+            ],
+            "should": null,
+            "mustNot": null,
+            "filter": null
+        }
+    },
+    "limit": 5,
+    "page": 0
+}

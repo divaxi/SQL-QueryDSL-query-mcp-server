@@ -2,6 +2,8 @@ package com.spring.ai.mapper;
 
 import com.querydsl.core.types.Path;
 import com.spring.ai.model.QEmployee;
+import com.spring.ai.model.QEmployeeProject;
+import com.spring.ai.model.QProject;
 
 import java.util.Map;
 
@@ -9,6 +11,8 @@ import java.util.Map;
 public class EmployeeFieldMap extends AbstractFieldMap {
 
     private static final QEmployee qEmployee = QEmployee.employee;
+    private static final QEmployeeProject qEmployeeProject = QEmployeeProject.employeeProject;
+    private static final QProject qProject = QProject.project;
 
     public static final Map<String, Path<?>> FIELD_MAP = Map.of(
         "employee_id", qEmployee.employeeId,
@@ -19,7 +23,8 @@ public class EmployeeFieldMap extends AbstractFieldMap {
         "hire_date", qEmployee.hireDate,
         "manager_first_name", qEmployee.manager.firstName,
         "manager_last_name", qEmployee.manager.lastName,
-        "deparment_name", qEmployee.department.departmentName
+        "deparment_name", qEmployee.department.departmentName,
+        "project_name", qProject.projectName
     );
 
     @Override
