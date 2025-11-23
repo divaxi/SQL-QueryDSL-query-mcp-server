@@ -33,12 +33,12 @@ public class QueryDSLBuilder {
 
     private final AbstractFieldMap fieldMap;
 
-    public  Predicate create(QueryRequest queryDslObj, EntityPathBase table) {
+    public  Predicate create(QueryRequest queryDslObj) {
         BoolQuery queryJson = queryDslObj.getQuery();
-        return buildPredicate(queryJson, table);
+        return buildPredicate(queryJson);
     }
 
-    public  Predicate buildPredicate(BoolQuery queryJson, EntityPathBase table)
+    public  Predicate buildPredicate(BoolQuery queryJson)
             throws IllegalArgumentException {
         BooleanBuilder builder = new BooleanBuilder();
         BoolQuery.Clause clauses = queryJson.getBool();
@@ -46,26 +46,26 @@ public class QueryDSLBuilder {
         // Process each clause and add to builder
         if (clauses.getMust() != null && !clauses.getMust().isEmpty()) {
             for (QueryClause clause : clauses.getMust()) {
-                builder.and(parseClause(clause, table));
+                builder.and(parseClause(clause));
             }
         }
         if (clauses.getShould() != null && !clauses.getShould().isEmpty()) {
             for (QueryClause clause : clauses.getShould()) {
-                builder.or(parseClause(clause, table));
+                builder.or(parseClause(clause));
                 // Process each clause and add to builder
             }
         }
 
         if (clauses.getMustNot() != null && !clauses.getMustNot().isEmpty()) {
             for (QueryClause clause : clauses.getMustNot()) {
-                builder.andNot(parseClause(clause, table));
+                builder.andNot(parseClause(clause));
                 // Process each clause and add to builder
             }
         }
 
         if (clauses.getFilter() != null && !clauses.getFilter().isEmpty()) {
             for (QueryClause clause : clauses.getFilter()) {
-                builder.and(parseClause(clause, table));
+                builder.and(parseClause(clause));
                 // Process each clause and add to builder
             }
 
@@ -74,25 +74,25 @@ public class QueryDSLBuilder {
         return builder;
     }
 
-    private Predicate parseClause(QueryClause clause, EntityPathBase table) {
+    private Predicate parseClause(QueryClause clause) {
         if (clause == null)
             return null;
 
         if (clause instanceof BoolQuery boolQuery) {
-            return buildPredicate(boolQuery, table);
+            return buildPredicate(boolQuery);
         } else if (clause instanceof MatchQuery match) {
-            return parseMatch(match, table);
+            return parseMatch(match);
         } else if (clause instanceof TermQuery term) {
-            return parseTerm(term, table);
+            return parseTerm(term);
         } else if (clause instanceof RangeQuery range) {
-            return parseRange(range, table);
+            return parseRange(range);
         } else {
             throw new IllegalArgumentException("Unknown query clause type: " + clause.getClass().getName());
         }
 
     }
 
-    private  Predicate parseMatch(MatchQuery match, EntityPathBase table) {
+    private  Predicate parseMatch(MatchQuery match) {
         BooleanBuilder builder = new BooleanBuilder();
 
         // Lấy field và value từ map
@@ -126,7 +126,7 @@ public class QueryDSLBuilder {
         return builder;
     }
 
-    private Predicate parseTerm(TermQuery termQuery, EntityPathBase table) {
+    private Predicate parseTerm(TermQuery termQuery) {
         BooleanBuilder builder = new BooleanBuilder();
 
         // Validate
@@ -160,7 +160,7 @@ public class QueryDSLBuilder {
         return builder;
     }
 
-    private  Predicate parseRange(RangeQuery rangeQuery, EntityPathBase table) {
+    private  Predicate parseRange(RangeQuery rangeQuery) {
         BooleanBuilder builder = new BooleanBuilder();
 
         if (rangeQuery.getRange() == null || rangeQuery.getRange().isEmpty()) {

@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.querydsl.core.types.Path;
 
+
 public abstract class AbstractFieldMap {
 
     protected  abstract  Map<String,Path<?>> getFieldMap();

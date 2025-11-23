@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.spring.ai.dto.EmployeePageRes;
 import com.spring.ai.dto.PagingList;
 import com.spring.ai.dto.QueryRequest;
-import com.spring.ai.model.EmployeeResponse;
+import com.spring.ai.dto.Employee.EmployeeResponse;
 import com.spring.ai.service.EmployeeService;
 
 import jakarta.validation.Valid;
@@ -23,16 +23,6 @@ import lombok.RequiredArgsConstructor;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
-
-    @GetMapping("")
-    public ResponseEntity<EmployeePageRes> findAll() {
-        return ResponseEntity.ok(employeeService.findAllFilteredEmployees(null));
-    }
-
-    @PostMapping("/test")
-    public ResponseEntity<QueryRequest> testEndpoint(@Valid @RequestBody QueryRequest queryRequest) {
-        return ResponseEntity.ok(queryRequest);
-    }
 
     @PostMapping("/querydsl")
     public ResponseEntity<PagingList<EmployeeResponse>> queryDSLFilter(@Valid @RequestBody QueryRequest queryRequest){

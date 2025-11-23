@@ -22,11 +22,11 @@ public class SwaggerConfig {
     public OpenApiCustomizer queryDslExampleCustomizer() {
         return openApi -> {
             try {
-                // Đọc JSON từ file
+                // Read the example JSON Request Object from file
                 String json = Files.readString(Paths.get("src/main/resources/queryDSL-example.json"));
                 Map<String, Object> exampleValue = new ObjectMapper().readValue(json, Map.class);
 
-                // Lấy requestBody của endpoint /employee/querydsl
+                // Fetch request body of the API
                 if (openApi.getPaths().get("/employee/querydsl") != null) {
                     var post = openApi.getPaths().get("/employee/querydsl").getPost();
                     if (post.getRequestBody() != null) {
@@ -46,4 +46,3 @@ public class SwaggerConfig {
         };
     }
 }
-
