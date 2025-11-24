@@ -20,8 +20,8 @@ import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 
 import com.spring.ai.dto.PagingList;
-import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.dto.Employee.EmployeeResponse;
+import com.spring.ai.dto.Query.QueryRequest;
 import com.spring.ai.repository.EmployeeRepositoryQueryDsl;
 
 import lombok.RequiredArgsConstructor;

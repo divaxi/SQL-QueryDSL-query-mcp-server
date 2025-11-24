@@ -12,11 +12,11 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.spring.ai.dto.BoolQuery;
-import com.spring.ai.dto.MatchQuery;
-import com.spring.ai.dto.QueryClause;
-import com.spring.ai.dto.RangeQuery;
-import com.spring.ai.dto.TermQuery;
+import com.spring.ai.dto.Query.BoolQuery;
+import com.spring.ai.dto.Query.MatchQuery;
+import com.spring.ai.dto.Query.QueryClause;
+import com.spring.ai.dto.Query.RangeQuery;
+import com.spring.ai.dto.Query.TermQuery;
 
 public class QueryDeserializer extends JsonDeserializer<QueryClause> {
 

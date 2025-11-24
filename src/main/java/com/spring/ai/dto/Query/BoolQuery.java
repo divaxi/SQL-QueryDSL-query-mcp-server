@@ -1,5 +1,5 @@
 
-package com.spring.ai.dto;
+package com.spring.ai.dto.Query;
 
 import java.util.List;
 

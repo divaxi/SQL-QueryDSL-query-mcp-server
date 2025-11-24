@@ -15,12 +15,12 @@ import com.querydsl.core.types.dsl.DatePath;
 import com.querydsl.core.types.dsl.EntityPathBase;
 import com.querydsl.core.types.dsl.NumberPath;
 import com.querydsl.core.types.dsl.StringPath;
-import com.spring.ai.dto.BoolQuery;
-import com.spring.ai.dto.MatchQuery;
-import com.spring.ai.dto.QueryClause;
-import com.spring.ai.dto.QueryRequest;
-import com.spring.ai.dto.RangeQuery;
-import com.spring.ai.dto.TermQuery;
+import com.spring.ai.dto.Query.BoolQuery;
+import com.spring.ai.dto.Query.MatchQuery;
+import com.spring.ai.dto.Query.QueryClause;
+import com.spring.ai.dto.Query.QueryRequest;
+import com.spring.ai.dto.Query.RangeQuery;
+import com.spring.ai.dto.Query.TermQuery;
 import com.spring.ai.mapper.AbstractFieldMap;
 
 import lombok.RequiredArgsConstructor;

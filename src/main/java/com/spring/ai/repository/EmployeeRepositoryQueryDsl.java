@@ -9,12 +9,12 @@ import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.spring.ai.dto.PagingList;
-import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.dto.Employee.EmployeeResponse;
 import com.spring.ai.mapper.EmployeeFieldMap;
 import com.spring.ai.model.QEmployee;
 import com.spring.ai.model.QEmployeeProject;
 import com.spring.ai.dto.Employee.QEmployeeResponse;
+import com.spring.ai.dto.Query.QueryRequest;
 import com.spring.ai.model.QProject;
 import com.spring.ai.util.builder.QueryDSLBuilder;
 

@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.ai.dto.EmployeePageRes;
 import com.spring.ai.dto.PagingList;
-import com.spring.ai.dto.QueryRequest;
 import com.spring.ai.dto.Employee.EmployeeResponse;
+import com.spring.ai.dto.Query.QueryRequest;
 import com.spring.ai.service.EmployeeService;
 
 import jakarta.validation.Valid;
