@@ -1,9 +1,7 @@
 package com.spring.ai.repository;
 
-import java.time.Duration;
 import java.util.List;
 
-import org.apache.tomcat.util.net.WriteBuffer.Sink;
 import org.springframework.stereotype.Repository;
 
 import com.querydsl.core.types.Predicate;

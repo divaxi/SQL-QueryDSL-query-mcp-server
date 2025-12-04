@@ -15,9 +15,6 @@
  */
 package com.spring.ai.service;
 
-
-import java.time.Duration;
-
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 
@@ -34,13 +31,12 @@ import reactor.core.publisher.Flux;
 @Slf4j
 public class EmployeeService {
 
-private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
+     private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
 
-@Tool(description ="QueryDSL for filtering Employee")
-public Flux<ResponseChunk> filterEmployeeQueryDSL( QueryRequest queryRequest) {     
-     return employeeRepositoryQueryDsl.filterEmployeeQueryDSL(queryRequest);
+     @Tool(description = "QueryDSL for filtering Employee")
+     public Flux<ResponseChunk> filterEmployeeQueryDSL(QueryRequest queryRequest) {
 
+          return employeeRepositoryQueryDsl.filterEmployeeQueryDSL(queryRequest);
 
-}
-
+     }
 }
