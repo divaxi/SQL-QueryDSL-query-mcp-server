@@ -15,7 +15,6 @@
  */
 package com.spring.ai.service;
 
-
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 
@@ -32,11 +31,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class EmployeeService {
 
-private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
+    private final EmployeeRepositoryQueryDsl employeeRepositoryQueryDsl;
 
-@Tool(description ="QueryDSL for filtering Employee")
-public PagingList<EmployeeResponse> filterEmployeeQueryDSL( QueryRequest queryRequest) {     
-    return employeeRepositoryQueryDsl.filterEmployeeQueryDsl(queryRequest);
-}
+    @Tool(description = "Execute QueryDSL query to filtering Employee", name = "employees://execute-query")
+    public PagingList<EmployeeResponse> filterEmployeeQueryDSL(QueryRequest queryRequest) {
+        return employeeRepositoryQueryDsl.filterEmployeeQueryDsl(queryRequest);
+    }
 
 }
