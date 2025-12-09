@@ -1,9 +1,8 @@
-package com.spring.ai.prompt;
+// package com.spring.ai.prompt;
 
-import org.springframework.stereotype.Component;
+// import org.springframework.stereotype.Component;
 
-@Component
-public class EmployeePrompt {
+// @Component
+// public class EmployeePrompt {
 
-    
-}
+// }

@@ -1,5 +1,5 @@
-package com.spring.ai.configuration;
+// package com.spring.ai.configuration;
 
-public class McpConfig {
-    
-}
+// public class McpConfig {
+
+// }
